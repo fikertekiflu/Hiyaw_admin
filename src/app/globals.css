@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Hiyaw Brand Colors - HEX for reference */
+    --hiyaw-primary-yellow-hex: #F8B133; /* HSL: 40 93% 61% */
+    --hiyaw-secondary-orange-hex: #F05A28; /* HSL: 16 88% 52% */
+    --hiyaw-dark-text-hex: #41423A;      /* HSL: 47 10% 23% */
+
+    /* HSL Component Variables for Darker Elegant Theme v3 - CORRECTED */
+    /* Backgrounds */
+    --background-hue: 40; --background-saturation: 25%; --background-lightness: 97%; /* #F9F7F5 Very Soft Cream/Linen */
+    --foreground-hue: 47; --foreground-saturation: 10%; --foreground-lightness: 23%; /* #41423A Hiyaw Dark */
+
+    /* Cards */
+    --card-hue: 0; --card-saturation: 0%; --card-lightness: 100%; /* #FFFFFF Pure White for cards, to pop */
+    --card-foreground-hue: var(--foreground-hue); --card-foreground-saturation: var(--foreground-saturation); --card-foreground-lightness: var(--foreground-lightness);
+
+    /* Popovers */
+    --popover-hue: var(--card-hue); --popover-saturation: var(--card-saturation); --popover-lightness: var(--card-lightness);
+    --popover-foreground-hue: var(--card-foreground-hue); --popover-foreground-saturation: var(--card-foreground-saturation); --popover-foreground-lightness: var(--card-foreground-lightness);
+
+    /* Primary Action Colors (Hiyaw Yellow) */
+    --primary-hue: 40; --primary-saturation: 93%; --primary-lightness: 61%;
+    --primary-foreground-hue: var(--foreground-hue); --primary-foreground-saturation: var(--foreground-saturation); --primary-foreground-lightness: var(--foreground-lightness);
+
+    /* Secondary Action Colors (Hiyaw Orange) */
+    --secondary-hue: 16; --secondary-saturation: 88%; --secondary-lightness: 52%;
+    --secondary-foreground-hue: 0; --secondary-foreground-saturation: 0%; --secondary-foreground-lightness: 100%; /* White */
+
+    /* Muted (Dashboard Area Background - used with opacity) */
+    /* This will be a darker base, so bg-muted/40 creates a visible darker shade */
+    --muted-hue: 35; --muted-saturation: 10%; --muted-lightness: 55%; /* #9A9690 -> #928E86 Darker Stone/Taupe. */
+    --muted-foreground-hue: 38; --muted-foreground-saturation: 10%; --muted-foreground-lightness: 30%; /* Darker muted text */
+
+    /* Accent */
+    --accent-hue: var(--primary-hue); --accent-saturation: var(--primary-saturation); --accent-lightness: var(--primary-lightness);
+    --accent-foreground-hue: var(--primary-foreground-hue); --accent-foreground-saturation: var(--primary-foreground-saturation); --accent-foreground-lightness: var(--primary-foreground-lightness);
+
+    /* Destructive */
+    --destructive-hue: 0; --destructive-saturation: 84%; --destructive-lightness: 60%; /* Red */
+    --destructive-foreground-hue: 0; --destructive-foreground-saturation: 0%; --destructive-foreground-lightness: 100%; /* White */
+
+    /* Borders & Inputs */
+    --border-hue: 40; --border-saturation: 9%; --border-lightness: 70%; /* #B9B6AF Darker Muted Taupe Border */
+    --input-hue: 40; --input-saturation: 15%; --input-lightness: 98%; /* #FCFAF7 Very light cream for input bg, to contrast with darker muted bg */
+    --ring-hue: var(--primary-hue); --ring-saturation: var(--primary-saturation); --ring-lightness: var(--primary-lightness);
+
+    --radius: 0.75rem; /* Softer, modern rounded corners */
+
+    /* Sidebar (Dark Contrasting - Hiyaw Dark) */
+    --sidebar-hue: 47; --sidebar-saturation: 10%; --sidebar-lightness: 23%; /* #41423A Hiyaw Dark */
+    --sidebar-foreground-hue: 40; --sidebar-foreground-saturation: 25%; --sidebar-foreground-lightness: 92%; /* #F0EFEA Light Cream/Off-white text */
+    --sidebar-primary-hue: var(--primary-hue); --sidebar-primary-saturation: var(--primary-saturation); --sidebar-primary-lightness: var(--primary-lightness); /* Hiyaw Yellow for active icon */
+    --sidebar-primary-foreground-hue: var(--primary-hue); --sidebar-primary-foreground-saturation: var(--primary-saturation); --sidebar-primary-foreground-lightness: var(--primary-lightness); /* Hiyaw yellow for active text */
+    --sidebar-accent-hue: 47; --sidebar-accent-saturation: 10%; --sidebar-accent-lightness: 28%; /* #504c48 Slightly lighter Hiyaw Dark for hover/active bg */
+    --sidebar-accent-foreground-hue: var(--primary-hue); --sidebar-accent-saturation: var(--primary-saturation); --sidebar-accent-foreground-lightness: var(--primary-lightness); /* Hiyaw Yellow for text on hover/active */
+    --sidebar-border-hue: 47; --sidebar-border-saturation: 10%; --sidebar-border-lightness: 18%; /* Darker border for dark sidebar, or none if preferred */
+    --sidebar-ring-hue: var(--ring-hue); --sidebar-ring-saturation: var(--ring-saturation); --sidebar-ring-lightness: var(--ring-lightness);
+  }
+
+  .dark {
+    /* Define your Hiyaw dark theme variables here - keeping it high contrast */
+    --background-hue: 47; --background-saturation: 10%; --background-lightness: 10%; /* Even Darker Hiyaw (near black) */
+    --foreground-hue: 38; --foreground-saturation: 20%; --foreground-lightness: 92%; /* Light Creamy text */
+
+    --card-hue: 47; --card-saturation: 10%; --card-lightness: 15%; /* Dark Card */
+    --card-foreground-hue: var(--foreground-hue); --card-foreground-saturation: var(--foreground-saturation); --card-foreground-lightness: var(--foreground-lightness);
+
+    --popover-hue: var(--card-hue); --popover-saturation: var(--card-saturation); --popover-lightness: var(--card-lightness);
+    --popover-foreground-hue: var(--card-foreground-hue); --popover-foreground-saturation: var(--card-foreground-saturation); --popover-foreground-lightness: var(--card-foreground-lightness);
+
+    --primary-hue: 40; --primary-saturation: 93%; --primary-lightness: 61%; /* Hiyaw Yellow remains vibrant */
+    --primary-foreground-hue: 47; --primary-foreground-saturation: 10%; --primary-foreground-lightness: 12%; /* Dark text on yellow */
+
+    --secondary-hue: 16; --secondary-saturation: 88%; --secondary-lightness: 52%; /* Hiyaw Orange remains vibrant */
+    --secondary-foreground-hue: 0; --secondary-foreground-saturation: 0%; --secondary-foreground-lightness: 100%; /* White text */
+
+    --muted-hue: 47; --muted-saturation: 10%; --muted-lightness: 16%; /* Dark Muted */
+    --muted-foreground-hue: 38; --muted-foreground-saturation: 15%; --muted-foreground-lightness: 75%;
+
+    --accent-hue: var(--primary-hue); --accent-saturation: var(--primary-saturation); --accent-lightness: var(--primary-lightness);
+    --accent-foreground-hue: var(--background-hue); --accent-foreground-saturation: var(--background-saturation); --accent-foreground-lightness: var(--background-lightness);
+
+    --destructive-hue: 0; --destructive-saturation: 70%; --destructive-lightness: 55%;
+    --destructive-foreground-hue: 0; --destructive-foreground-saturation: 0%; --destructive-foreground-lightness: 95%;
+
+    --border-hue: 47; --border-saturation: 10%; --border-lightness: 25%;
+    --input-hue: 47; --input-saturation: 10%; --input-lightness: 20%;
+    --ring-hue: var(--primary-hue); --ring-saturation: var(--primary-saturation); --ring-lightness: var(--primary-lightness);
+
+    /* Sidebar Dark Theme */
+    --sidebar-hue: 47; --sidebar-saturation: 10%; --sidebar-lightness: 8%; /* Very dark sidebar */
+    --sidebar-foreground-hue: 38; --sidebar-foreground-saturation: 20%; --sidebar-foreground-lightness: 88%; /* Lighter text */
+    --sidebar-primary-hue: var(--primary-hue); --sidebar-primary-saturation: var(--primary-saturation); --sidebar-primary-lightness: var(--primary-lightness);
+    --sidebar-primary-foreground-hue: var(--primary-hue); /* Yellow text on active dark item */
+    --sidebar-accent-hue: var(--primary-hue); --sidebar-accent-saturation: var(--primary-saturation); --sidebar-accent-lightness: calc(var(--primary-lightness) - 30%); /* Darker Yellow Accent for hover bg */
+    --sidebar-accent-foreground-hue: var(--primary-hue); /* Yellow text on hover */
+    --sidebar-border-hue: 47; --sidebar-border-saturation: 10%; --sidebar-border-lightness: 12%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-brand-accent {
+    font-family: theme('fontFamily.brand-accent');
+  }
+}
